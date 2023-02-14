@@ -1,23 +1,22 @@
 import java.util.Scanner;
 class Example6 {
-  public static void main(String args[]){
-    Scanner s=new Scanner(System.in);
-    int num1;
-    System.out.println("enter the number");
-    num1=s.nextInt();
-    if(num1%2==0)
-    {
-       System.out.println("Num1 is even");
-      
+  public static void main(String args[]) {
+     Scanner s = new Scanner(System.in);
+    
+
+    for(int k=1;k<=100;k++)
+      {
+      int sum=0;
+    for(int i=1;i<=k/2;i++){
+if(k%i==0){
+ sum=sum+i;
+}
     }
-      else if(num1==0){
-         System.out.println("Num1 is zero");
-      }
-    else{
-       System.out.println("Num1 is odd");
+    if(sum==k)
+    {
+      System.out.println(k);
     }
   }
 }
-    
-    
-  
+}
+        

@@ -1,25 +1,28 @@
 import java.util.Scanner;
-class Example10 {
-  public static void main(String args[]){
-    Scanner s=new Scanner(System.in);
-    int unit;
-    double charge=0f;
-      System.out.println("enter the number of units");
-    unit=s.nextInt();
-    if(unit<=50){
-      charge=unit*0.50;
+
+class Example16 {
+  public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("enter the number to check strong or not :");
+    int num, i = 1, fact = 1, rem = 0, strong = 0;
+    num = s.nextInt();
+    int temp = num;
+    while (num != 0) {
+      rem = num % 10;
+      fact = 1;
+      for (i = 1; i <= rem; i++) {
+        fact = fact * i;
+      }
+      strong = strong + fact;
+      num = num / 10;
     }
-    else if(unit<=150)
+    if (temp == strong) {
+      System.out.println("Yes it is Strong number");
+    } else
     {
-      charge=(50*0.50)+(unit-50)*1.23;
+      System.out.println("It is not strong number");
     }
-    else if(unit<=250){
-      charge=(50*0.50)+(100*1.23)+(unit-150)*1.90;
-    }
-    else{
-      charge=(50*0.50)+(100*1.23)+(100*1.90)+(unit-250)*2.34;
-    }
-     System.out.println("the bill is"+charge);
   }
 }
-    
+  
+  

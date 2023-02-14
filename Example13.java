@@ -1,43 +1,32 @@
 import java.util.Scanner;
 
-class results {
-  public static void main(String args[]) {
-    Scanner s = new Scanner(System.in);
-    int pm, em, im;
-    int project, external, internal, totalscore;
+class Example14 {
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int num,count=0,amg=1,temp,a=0,b=1,rem=1;
+    System.out.println("enter the number ");
+    num=s.nextInt();
+    temp=num;
+    int t=num;
+    while(num !=0){
+      num=num/10;
+      count=count+1;
+     }
 
-    System.out.println("enter the students marks in project external internal");
-    pm = s.nextInt();
-    em = s.nextInt();
-    im = s.nextInt();
-    if (em >= 50 && pm >= 50 && im >= 50) {
-      internal = (10 * im) / 100;
-      external = (20 * em) / 100;
-      project = (70 * pm) / 100;
-      totalscore = project + internal + external;
-      if (totalscore >= 90) {
-        System.out.println("grade A");
-      } else if (totalscore >= 70) {
-        System.out.println("grade B");
-      } else {
-        System.out.println("grade C");
-      }
-    } else if (pm <= 50) {
-      System.out.println("project subject is failed and marks is " + pm);
+    while(temp !=0){
+      rem=1;
+      for(int i=1;i<=count;i++){
+        rem*=(temp%10);
+       
+     }
+      a=a+rem;
+      temp=temp/10;
     }
-    if (im <= 50) {
-      System.out.println("internal subject is failed and marks is " + im);
+    if(a==t){
+    System.out.println("amstrong number");
     }
-    if (em <= 50) {
-      System.out.println("external subject is failed and mark s  is " + em);
+    else{
+      System.out.println("not an amstrong number");
     }
   }
 }
-
-    
-
-
-    
-    
-    
-    

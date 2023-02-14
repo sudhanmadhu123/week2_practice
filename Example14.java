@@ -3,23 +3,20 @@ import java.util.Scanner;
 class Example14 {
   public static void main(String args[]) {
     Scanner s = new Scanner(System.in);
-    int year;
-    int count=0;
-    System.out.println("enter the year ");
-    year = s.nextInt();
-    if (year % 4 == 0) {
-      count=count+1;
-      if (year % 100 == 0) {
-        if (year % 400 == 0) {
-          count=count+1;
+    int i = 1, count = 0, pc = 0;
+    for (int k = 0; k <= 100; k++) {
+      count = 0;
+      for (i = 1; i <= k / 2; i++) {
+        if (k % i == 0) {
+          count++;
         }
       }
-    } 
-    if(count>=1){
-      System.out.println("its leap year");
-    }
-    else{
-      System.out.println("its not leap year");
+      if (count == 1) {
+        pc++;
+        if (pc % 2 == 1) {
+          System.out.println(k);
+        }
+      }
     }
   }
 }
