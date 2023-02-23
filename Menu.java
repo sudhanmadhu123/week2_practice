@@ -1,4 +1,4 @@
-/*import java.util.Scanner; class Example{  
+/*import java.util.Scanner; class Example1 {  
   public void isPerfect() {
     Scanner s = new Scanner(System.in);
     System.out.println("Enter number to check it is perfect or not");
@@ -52,8 +52,8 @@
     }
   }
 }*/
-/*import java.util.Scanner;
-class Example1 {
+import java.util.Scanner;
+class Menu {
   Scanner s=new Scanner(System.in);
 public void isPerfect() {
  System.out.println("Enter number to check it is perfect or not");
@@ -113,4 +113,4 @@ else{
 Example1 obj = new Example1();
  obj.viewOptions();
  }
-}*/
+}
